@@ -19,7 +19,7 @@ const Link = require("../models/Link");
 router.post("/generate", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { from, userId } = req.body;
     try {
-        const baseUrl = "http://localhost:5000";
+        const baseUrl = "https://yshrt.herokuapp.com";
         const code = shortid_1.default.generate();
         const existing = yield Link.findOne({ from });
         if (existing)
